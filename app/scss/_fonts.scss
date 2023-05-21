@@ -1,0 +1,38 @@
+@mixin font($f-name, $type, $weight) {
+      @font-face {
+        font-family: '#{$f-name}';
+        src: url('../fonts/#{$f-name}-#{$type}.woff2') format('woff2'),
+             url('../fonts/#{$f-name}-#{$type}.woff') format('woff'),
+             url('../fonts/#{$f-name}-#{$type}.ttf') format('truetype');
+        font-weight: $weight;
+        font-style: normal;
+        font-display: swap;
+      }
+  }
+
+// @include font("", "Thin", 100);
+// @include font("", "ExtraLight", 200);
+// @include font("", "Light", 300);
+// @include font("", "Regular", 400);
+// @include font("", "Medium", 500);
+// @include font("", "Semibold", 600);
+// @include font("", "Bold", 700);
+// @include font("", "Extrabold", 800);
+// @include font("", "Black", 800);
+
+
+@include font("SFProDisplay", "Bold", 700);
+@include font("SFProDisplay", "Regular", 400);
+@include font("SFProDisplay", "Medium", 500);
+@include font("SFProDisplay", "Semibold", 600);
+
+@include font("Roboto", "Regular", 400);
+@include font("Roboto", "Medium", 500);
+@include font("Roboto", "Bold", 700);
+
+@include font("Inter", "Regular", 400);
+@include font("Inter", "Medium", 500);
+@include font("Inter", "Semibold", 600);
+@include font("Inter", "Bold", 700);
+@include font("Inter", "Black", 800);
+
