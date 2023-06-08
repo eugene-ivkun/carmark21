@@ -247,10 +247,6 @@ table {
   font-display: swap;
 }
 
-svg {
-  fill: black;
-}
-
 body {
   font-family: inter;
   font-weight: 400;
@@ -263,10 +259,8 @@ body {
 }
 
 .container {
-  max-width: 1310px;
+  width: 100%;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .header {
@@ -276,6 +270,12 @@ body {
   -o-transition: padding 0.2s;
   transition: padding 0.2s;
   background-color: white;
+}
+
+.header-main {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .header-main--active .header-main__btn div:nth-child(1) {
@@ -364,17 +364,19 @@ body {
 }
 
 .header-menu__nav {
-  margin-right: 100px;
+  margin-right: 80px;
 }
 
 .header-menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
-.header-menu__item + .header-menu__item {
-  margin-left: 40px;
+.header-menu__item {
+  margin: 5px 20px;
 }
 
 .header-menu__link {
@@ -392,15 +394,27 @@ body {
   text-shadow: 0.7px 0px 0px #F50E30;
 }
 
-.header-menu__link--active:after {
+.header-menu__link:after {
   content: "";
   display: block;
-  width: 100%;
-  height: 2px;
   background-color: #F50E30;
   position: absolute;
   bottom: -5px;
   left: 0px;
+  width: 100%;
+  height: 2px;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+}
+
+.header-menu__link.active:after {
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .header-menu__inner {
@@ -434,6 +448,9 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .header__social {
@@ -443,16 +460,17 @@ body {
   display: flex;
 }
 
+.header__social-item + .header__social-item {
+  margin-left: 12px;
+}
+
 .header__social-link {
   width: 30px;
   height: 30px;
+  display: block;
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
-}
-
-.header__social-link + .header__social-link {
-  margin-left: 12px;
 }
 
 .header__social-link:hover .header__social-icon {
@@ -469,8 +487,8 @@ body {
 }
 
 .btn-primary {
-  border-radius: 3px;
-  border: 0px;
+  border-radius: 8px;
+  border: 2px solid transparent;
   background-color: #F50E30;
   font-family: SFProDisplay;
   color: white;
@@ -483,17 +501,25 @@ body {
   -o-transition: all 0.2s;
   transition: all 0.2s;
   line-height: 1.4em;
+  text-shadow: 0px 0px 0 #F50E30;
   border: 2px solid transparent;
 }
 
 .btn-primary:hover {
   background-color: transparent;
-  color: black;
-  border: 2px solid black;
+  text-shadow: 0.5px 0px 0 #F50E30;
+  border: 2px solid #F50E30;
+  color: #F50E30;
 }
 
 .banner {
   overflow: hidden;
+}
+
+.banner__btn {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 14px 59px;
 }
 
 .banner__text {
@@ -522,12 +548,6 @@ body {
   font-weight: 500;
   line-height: 1.6em;
   margin-bottom: 44px;
-}
-
-.banner__btn {
-  font-size: 24px;
-  font-weight: 700;
-  padding: 14px 59px;
 }
 
 .banner__inner {
@@ -658,22 +678,1529 @@ body {
   margin-top: 24px;
 }
 
-@media (max-width: 1310px) {
+.about-us {
+  position: relative;
+}
+
+.about-us__img {
+  position: absolute;
+  z-index: 10;
+  top: 0px;
+  right: calc(50% + 57px);
+  width: calc(50% - 57px);
+  max-width: 1100px;
+  height: 100%;
+  background-color: silver;
+  background-image: url(../img/about-us/img-1.jpg);
+  background-position: center right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about-us__title {
+  margin-bottom: 12px;
+}
+
+.about-us__main {
+  position: relative;
+  z-index: 11;
+  margin-left: auto;
+  width: 46%;
+  padding: 52px 0 50px 0;
+}
+
+.about-us__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.about-us__item + .about-us__item {
+  margin-top: 14px;
+}
+
+.about-us__item-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 500px;
+  background-color: #F50E30;
+  margin-right: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.about-us__item-icon-img {
+  width: 36px;
+  height: 36px;
+  fill: white;
+}
+
+.about-us__item-text {
+  font-size: 20px;
+  line-height: 1.4em;
+  font-weight: 500;
+}
+
+.about-us__list {
+  margin-top: 24px;
+}
+
+.about-us__prompt {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: 2px solid rgba(245, 14, 48, 0.15);
+  margin-top: 24px;
+  max-width: 488px;
+}
+
+.about-us__prompt-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+.about-us__btn-wrap {
+  margin-top: 32px;
+}
+
+.slider {
+  position: relative;
+}
+
+.slider__btn {
+  position: absolute;
+  z-index: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 500px;
+  background-color: #F50E30;
+  border: 0px;
+  top: 50%;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  border: 2px solid transparent;
+}
+
+.slider__btn:hover {
+  background-color: white;
+  border: 2px solid #F50E30;
+}
+
+.slider__btn:hover .slider__btn-icon {
+  fill: #F50E30;
+}
+
+.slider__btn-icon {
+  width: 13px;
+  height: 21px;
+  fill: white;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.slider__btn--prev {
+  left: 0%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.slider__btn--next {
+  right: 0%;
+  -webkit-transform: translateY(-50%) translateX(50%);
+  -ms-transform: translateY(-50%) translateX(50%);
+  transform: translateY(-50%) translateX(50%);
+}
+
+.slider__btn--next .slider__btn-icon {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.slider__btn.swiper-button-disabled {
+  background-color: #fcabb7;
+  pointer-events: none;
+}
+
+.slider--what-cars .slider__btn--prev {
+  -webkit-transform: translateY(-50%) translateX(-65%);
+  -ms-transform: translateY(-50%) translateX(-65%);
+  transform: translateY(-50%) translateX(-65%);
+}
+
+.slider--what-cars .slider__btn--next {
+  -webkit-transform: translateY(-50%) translateX(65%);
+  -ms-transform: translateY(-50%) translateX(65%);
+  transform: translateY(-50%) translateX(65%);
+}
+
+.slider__pagination {
+  height: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: static;
+}
+
+.slider__pagination-item {
+  cursor: pointer;
+  max-width: 100px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.slider__pagination-item.swiper-pagination-bullet-active {
+  background-color: #F50E30;
+}
+
+.slider__pagination-item + .slider__pagination-item {
+  margin-left: 8px;
+}
+
+.what-cars {
+  overflow: hidden;
+  background-color: #F4F6F8;
+}
+
+.what-cars__slider {
+  margin-bottom: 28px;
+}
+
+.what-cars__slider-wrap {
+  margin: 0 -10px;
+}
+
+.what-cars__header {
+  margin-bottom: 40px;
+}
+
+.what-cars__title {
+  margin-bottom: 20px;
+}
+
+.what-cars__slider {
+  padding: 10px;
+}
+
+.car-card {
+  padding: 20px 24px;
+  border-radius: 20px;
+  background-color: white;
+  -webkit-box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.1);
+}
+
+.car-card--color-shadow {
+  -webkit-box-shadow: 0 2px 37px 7px rgba(227, 81, 81, 0.23);
+  box-shadow: 0 2px 37px 7px rgba(227, 81, 81, 0.23);
+}
+
+.car-card--border {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid #CBCBCB;
+}
+
+.car-card__img {
+  padding-bottom: 72.5%;
+  background-color: silver;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #F4F6F8;
+}
+
+.car-card__name {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.5em;
+  margin-bottom: 16px;
+}
+
+.car-card__name--light {
+  color: #575757;
+}
+
+.car-card__features {
+  margin-bottom: 24px;
+}
+
+.car-card__features-name {
+  color: #808080;
+  font-weight: 400;
+  line-height: 1.25em;
+  font-size: 16px;
+  padding-right: 8px;
+  bottom: -2px;
+}
+
+.car-card__features-value {
+  padding-bottom: 2px;
+  font-size: 20px;
+  color: black;
+  font-weight: 600;
+  text-align: right;
+  line-height: 1.2em;
+  padding-left: 8px;
+  bottom: -4px;
+}
+
+.car-card__features-text {
+  position: relative;
+}
+
+.car-card__features-text span {
+  background-color: white;
+  line-height: 1.2em;
+  padding: 2px 0;
+}
+
+.car-card__features-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-bottom: 1px dashed #C1C1C1;
+}
+
+.car-card__features-item + .car-card__features-item {
+  margin-top: 16px;
+}
+
+.car-card__price-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.car-card__price-item + .car-card__price-item {
+  margin-top: 16px;
+}
+
+.car-card__price-name {
+  font-size: 16px;
+  line-height: 1.25em;
+  color: black;
+  font-weight: 400;
+  max-width: 160px;
+  margin-right: 22px;
+  text-align: left;
+}
+
+.car-card__price-name--light {
+  color: #808080;
+}
+
+.car-card__price-num {
+  font-size: 24px;
+  line-height: 1em;
+  font-weight: 400;
+  color: black;
+  text-align: right;
+  white-space: nowrap;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.car-card__price-num--color {
+  font-weight: 900;
+  color: #F50E30;
+}
+
+.car-card__btn {
+  width: 100%;
+  margin-top: 24px;
+}
+
+.banner-2__text {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-right: 4.2%;
+}
+
+.banner-2__title {
+  margin-bottom: 20px;
+}
+
+.banner-2__title-accent {
+  color: #F50E30;
+  background-color: transparent;
+}
+
+.banner-2__descr {
+  font-size: 20px;
+  line-height: 1.2em;
+  color: #333333;
+  margin-bottom: 32px;
+  max-width: 450px;
+}
+
+.banner-2__img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.banner-2__img-wrap {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.banner-2__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.process-accordion-btn.active {
+  padding-bottom: 0px;
+}
+
+.process-accordion-btn.active .process-accordion-btn__arrow {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.buying-process {
+  background-color: #F4F6F8;
+}
+
+.buying-process__steps-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 32px 0;
+}
+
+.buying-process__steps-num {
+  font-size: 80px;
+  line-height: 1.1em;
+  font-weight: 700;
+  color: #F50E30;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 25.5%;
+  flex: 0 0 25.5%;
+  text-align: center;
+}
+
+.buying-process__steps-title {
+  font-size: 36px;
+  line-height: 1.2222222222em;
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+.buying-process__steps-arrow {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 64px;
+  flex: 0 0 64px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  height: 64px;
+  border-radius: 500px;
+  background-color: #F50E30;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.buying-process__steps-arrow-icon {
+  width: 12px;
+  height: 25px;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  fill: white;
+}
+
+.buying-process__steps-item {
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.buying-process__steps-item:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.buying-process__steps-content {
+  display: none;
+  padding-bottom: 32px;
+}
+
+.buying-process__steps-content.active {
+  display: block;
+}
+
+.buying-process__substeps {
+  margin-left: 25.5%;
+  padding-top: 20px;
+}
+
+.buying-process__substeps-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.buying-process__substeps-item + .buying-process__substeps-item {
+  margin-top: 24px;
+}
+
+.buying-process__substeps-main {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 54.52%;
+  flex: 0 0 54.52%;
+}
+
+.buying-process__substeps-descr {
+  font-size: 18px;
+  line-height: 1.5555555556em;
+  color: #333333;
+}
+
+.buying-process__substeps-name {
+  font-size: 20px;
+  line-height: 1.45em;
+  font-weight: 500;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  margin-right: 40px;
+}
+
+.buying-process__substeps-download-link {
+  margin-top: 8px;
+}
+
+.buying-process__title {
+  margin-bottom: 40px;
+}
+
+.download-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.download-link:hover .download-link__text {
+  text-decoration: underline;
+}
+
+.download-link__icon {
+  width: 20px;
+  height: 20px;
+  fill: #F50E30;
+  margin-right: 10px;
+}
+
+.download-link__text {
+  font-size: 16px;
+  line-height: 1.5em;
+  font-weight: 400;
+  color: #F50E30;
+}
+
+.download-link--lg .download-link__text {
+  font-size: 20px;
+}
+
+.download-link--lg .download-link__icon {
+  width: 24px;
+  height: 24px;
+}
+
+.advantages {
+  overflow: hidden;
+  background-image: url(../img/advantages/bg-img.jpg);
+  background-color: #F4F6F8;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.advantages__title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.guarantees__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -12px;
+  margin-bottom: 32px;
+}
+
+.guarantees__item {
+  width: 33.33%;
+  padding: 0 12px;
+}
+
+.guarantees__item:nth-child(n+4) {
+  margin-top: 24px;
+}
+
+.guarantees__item-inner {
+  border-radius: 20px;
+  padding: 20px 25px 20px 40px;
+  padding-right: 25px;
+  min-height: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: white;
+  height: 100%;
+  -webkit-box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.08);
+}
+
+.guarantees__item-icon {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 60px;
+  flex: 0 0 60px;
+  height: 60px;
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.guarantees__item-icon-img {
+  width: 60px;
+  height: 60px;
+  fill: #F50E30;
+}
+
+.guarantees__item-text {
+  font-size: 24px;
+  line-height: 1.5em;
+  font-weight: 500;
+}
+
+.guarantees__contract-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.guarantees__contract-info-descr {
+  max-width: 738px;
+  font-size: 24px;
+  line-height: 1.3333333333em;
+  font-weight: 400;
+}
+
+.advantages-main__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -12px;
+}
+
+.advantages-main__item {
+  width: 41.5%;
+  padding: 0 12px;
+}
+
+.advantages-main__item--lg {
+  width: 58.48%;
+}
+
+.advantages-main__item:nth-child(n+3) {
+  margin-top: 24px;
+}
+
+.advantages-main__item-title {
+  font-size: 32px;
+  line-height: 1.375em;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.advantages-main__item-descr {
+  font-size: 20px;
+  line-height: 1.6em;
+  font-weight: 400;
+  color: #333333;
+}
+
+.advantages-main__item-inner {
+  border-radius: 20px;
+  padding: 40px 44px;
+  -webkit-box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.08);
+  height: 100%;
+  background-color: white;
+}
+
+.price-comparison {
+  overflow: hidden;
+  background-color: #F4F6F8;
+}
+
+.price-comparison__descr {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.price-comparison__title {
+  margin-bottom: 20px;
+}
+
+.price-comparison__header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.price-comparison__main {
+  padding: 49px 0;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 100px;
+}
+
+.price-comparison__slider-pagination {
+  display: none;
+}
+
+.price-comparison__car-card-wrap {
+  width: 36.1%;
+}
+
+.price-comparison__car-card-wrap + .price-comparison__car-card-wrap {
+  margin-left: 7.8%;
+}
+
+.price-comparison__car-card-name {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 2.0769230769em;
+}
+
+.price-comparison__slide-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+}
+
+.price-comparison__slide-inner:before {
+  content: "VS";
+  display: block;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  font-size: 44px;
+  font-weight: 700;
+  color: #C0C0C0;
+  line-height: 1.2272727273em;
+  top: 41%;
+}
+
+.price-comparison__btn-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid transparent;
+  margin-top: -19px;
+}
+
+.price-comparison__slider-main {
+  padding-bottom: 47px;
+}
+
+.price-comparison__advantages {
+  margin: 0 -12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.price-comparison__advantages-block {
+  width: 50%;
+  padding: 0 12px;
+}
+
+.price-comparison__advantages-block-inner {
+  background-color: white;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.08);
+  padding: 52px 60px 36px 52px;
+  height: 100%;
+}
+
+.price-comparison__advantages-title {
+  margin-bottom: 20px;
+}
+
+.price-comparison__advantages-descr {
+  margin-bottom: 24px;
+  color: #333333;
+}
+
+.price-comparison__advantages-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.price-comparison__advantages-item + .price-comparison__advantages-item {
+  margin-top: 14px;
+}
+
+.price-comparison__advantages-icon {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 36px;
+  flex: 0 0 36px;
+  height: 36px;
+  margin-right: 15px;
+}
+
+.price-comparison__advantages-icon-img {
+  width: 36px;
+  height: 36px;
+  fill: #F50E30;
+}
+
+.price-comparison__advantages-text {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4em;
+}
+
+.price-comparison__advantages-terms-about {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.1666666667em;
+}
+
+.price-comparison__advantages-terms-num {
+  font-size: 24px;
+  line-height: 1.1666666667em;
+  font-weight: 800;
+  margin-top: 16px;
+}
+
+.price-comparison__advantages-terms-num--lg {
+  font-size: 48px;
+  font-weight: 700;
+  color: #F50E30;
+}
+
+.price-comparison__advantages-terms-item + .price-comparison__advantages-terms-item {
+  margin-top: 24px;
+}
+
+.price-comparison__advantages-btn {
+  margin-top: 32px;
+}
+
+.banner-3 {
+  overflow: hidden;
+}
+
+.banner-3__text {
+  max-width: 605px;
+}
+
+.banner-3__title {
+  margin-bottom: 20px;
+}
+
+.banner-3__descr {
+  color: #333333;
+}
+
+.banner-3__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.banner-3__tooltip {
+  padding: 16px 30px;
+  border-radius: 10px;
+  background-color: #FEFEFE;
+  border: 3px solid rgba(245, 14, 48, 0.15);
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 410px;
+  flex: 0 0 410px;
+  margin-left: 50px;
+  font-size: 20px;
+  line-height: 1.7em;
+  font-weight: 500;
+}
+
+.banner-3__tooltip-num {
+  font-size: 36px;
+  color: #F50E30;
+  font-weight: 700;
+  background-color: transparent;
+  white-space: nowrap;
+}
+
+.banner-3__btn-wrap {
+  margin-bottom: 45px;
+  margin-top: 32px;
+}
+
+.banner-3__slider {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.banner-3__slider-img-wrap {
+  padding-bottom: 75%;
+  border-radius: 19px;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-3__slider-img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.banner-3__slider-pagination {
+  display: none;
+}
+
+.calculation {
+  background-color: #F4F6F8;
+  background-image: url("../img/calculation/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.calculation__form {
+  margin-bottom: 24px;
+}
+
+.calculation__form-number {
+  display: block;
+  width: 100%;
+  height: 60px;
+  border-radius: 8px;
+  border: 1px solid black;
+  margin-bottom: 16px;
+  padding: 0 20px;
+  color: #333333;
+  font-size: 20px;
+  line-height: 1.21em;
+  outline: none;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.calculation__form-number::-webkit-input-placeholder,
+.calculation__form-number::-moz-placeholder,
+.calculation__form-number:-ms-input-placeholder,
+.calculation__form-number:-moz-placeholder {
+  color: #CCCCCC;
+}
+
+.calculation__form-number:focus,
+.calculation__form-number:hover {
+  border: 2px solid black;
+}
+
+.calculation__form-submit {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.calculation__form-checkbox-text {
+  font-size: 12px;
+  line-height: 1.3333333333em;
+  font-weight: 400;
+  color: #808080;
+}
+
+.calculation__feedback {
+  padding: 40px 32px 50px 32px;
+  border-radius: 20px;
+  width: 35.85%;
+  background-color: white;
+}
+
+.calculation__feedback-title {
+  font-size: 24px;
+  line-height: 1.3333333333em;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.calculation__feedback-descr {
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.calculation__messengers-title {
+  font-size: 20px;
+  line-height: 1.2em;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.calculation__messengers-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.calculation__messengers-link {
+  padding: 8px 16px;
+  border: 1px solid #F50E30;
+  border-radius: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.calculation__messengers-link + .calculation__messengers-link {
+  margin-left: 12px;
+}
+
+.calculation__messengers-link:hover .calculation__messengers-name {
+  color: #F50E30;
+}
+
+.calculation__messengers-link:hover .calculation__messengers-icon-img {
+  fill: #F50E30;
+}
+
+.calculation__messengers-icon {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 20px;
+  flex: 0 0 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.calculation__messengers-icon-img {
+  width: 20px;
+  height: 20px;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.calculation__messengers-name {
+  font-size: 16px;
+  line-height: 1.5em;
+  font-weight: 400;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.calculation__feedback-advantages {
+  padding: 40px;
+  width: 59.51%;
+  background-color: white;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.08);
+}
+
+.calculation__feedback-advantages-title {
+  margin-bottom: 46px;
+}
+
+.calculation__feedback-advantages-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.calculation__feedback-advantages-item + .calculation__feedback-advantages-item {
+  margin-top: 24px;
+}
+
+.calculation__feedback-advantages-icon {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 36px;
+  flex: 0 0 36px;
+  height: 36px;
+  margin-right: 15px;
+}
+
+.calculation__feedback-advantages-img {
+  width: 36px;
+  height: 36px;
+  fill: #F50E30;
+}
+
+.calculation__feedback-advantages-text {
+  font-size: 20px;
+  line-height: 1.4em;
+  font-weight: 400;
+  max-width: 513px;
+}
+
+.calculation__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.checkbox {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 330px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox__icon {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 20px;
+  flex: 0 0 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.45);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 8px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.checkbox__icon-img {
+  width: 14px;
+  fill: white;
+  height: 14px;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.checkbox__input {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1000;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.checkbox:hover .checkbox__icon {
+  border: 2px solid black;
+}
+
+.checkbox__input:checked + .checkbox__icon {
+  background-color: black;
+}
+
+.checkbox__input:checked + .checkbox__icon .checkbox__icon-img {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.footer {
+  padding-top: 100px;
+}
+
+.footer__contact {
+  margin-bottom: 55px;
+}
+
+.footer__contact-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.footer__contact-item {
+  width: 33.3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-right: 25px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.footer__contact-item:nth-child(n+4) {
+  margin-top: 40px;
+}
+
+.footer__contact-name {
+  color: #7A7B7C;
+  font-size: 20px;
+  line-height: 1em;
+  margin-bottom: 20px;
+}
+
+.footer__contact-text {
+  font-size: 20px;
+  color: black;
+  line-height: 1.4em;
+  font-weight: 500;
+}
+
+.footer__contact-text--link:hover {
+  text-decoration: underline;
+}
+
+.footer__contact-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__contact-social-link {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 30px;
+  flex: 0 0 30px;
+  height: 30px;
+}
+
+.footer__contact-social-link:hover .footer__contact-social-icon {
+  fill: black;
+}
+
+.footer__contact-social-link + .footer__contact-social-link {
+  margin-left: 12px;
+}
+
+.footer__contact-social-icon {
+  width: 30px;
+  height: 30px;
+  fill: #F50E30;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.footer__contact-map {
+  width: 100%;
+  height: 321px;
+}
+
+.footer__contact-title {
+  margin-bottom: 43px;
+}
+
+.footer__bottom-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__bottom-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 43px;
+}
+
+.footer__bottom-menu-link {
+  color: #ABACAE;
+  font-size: 16px;
+  line-height: 1.75em;
+  font-weight: 500;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.footer__bottom-menu-link:hover {
+  color: #333333;
+}
+
+.footer__bottom-menu-link + .footer__bottom-menu-link {
+  margin-left: 10%;
+}
+
+@media (min-width: 576px) {
   .container {
-    max-width: 1200px;
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1310px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .slider--what-cars .slider__btn {
+    top: 129px;
+  }
+
+  .slider--what-cars .slider__btn--prev {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    left: -4px;
+  }
+
+  .slider--what-cars .slider__btn--next {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    right: -4px;
+  }
+}
+
+@media (max-width: 1367px) {
+  .slider--price-comparison .slider__btn--prev {
+    left: 45px;
+  }
+
+  .slider--price-comparison .slider__btn--next {
+    right: 45px;
+  }
+
+  .slider--banner-3 .slider__btn--prev {
+    -webkit-transform: translateY(-50%) translateX(0);
+    -ms-transform: translateY(-50%) translateX(0);
+    transform: translateY(-50%) translateX(0);
+    left: -17px;
+  }
+
+  .slider--banner-3 .slider__btn--next {
+    -webkit-transform: translateY(-50%) translateX(0%);
+    -ms-transform: translateY(-50%) translateX(0%);
+    transform: translateY(-50%) translateX(0%);
+    right: -17px;
+  }
+}
+
+@media (max-width: 1310px) {
+  .header-menu {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  .header-menu__nav {
+    margin: 0 auto;
+  }
+
+  .header-menu__item {
+    margin: 5px 15px;
   }
 
   .cards-section__item-title {
     font-size: 32px;
     margin-bottom: 22px;
   }
-}
 
-@media (max-width: 1200px) {
-  .container {
-    max-width: 992px;
+  .guarantees__item-inner {
+    padding: 20px 22px 20px 25px;
+    min-height: 150px;
   }
 
+  .guarantees__item-text {
+    font-size: 22px;
+  }
+
+  .guarantees__contract-info-descr {
+    font-size: 22px;
+  }
+
+  .calculation__feedback {
+    width: 39%;
+  }
+
+  .calculation__feedback-advantages {
+    width: 58.29%;
+  }
+}
+
+@media (max-width: 1199.5px) {
   .header--scrolled .header__contact {
     display: none;
   }
@@ -686,12 +2213,10 @@ body {
     margin-right: 0px;
   }
 
-  .header-menu__nav {
-    margin-right: 50px;
-  }
-
-  .header-menu__item + .header-menu__item {
-    margin-left: 35px;
+  .header-menu__inner {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
   }
 
   .header__numbers {
@@ -703,10 +2228,13 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
 
   .header__social {
-    margin-right: 50px;
+    margin-right: 0px;
   }
 
   .banner__title {
@@ -715,6 +2243,14 @@ body {
 
   .banner__inner {
     padding: 77px 0 111px 0;
+  }
+
+  .content-title {
+    font-size: 37px;
+  }
+
+  .content-descr {
+    font-size: 21px;
   }
 
   .cards-section__item-descr {
@@ -728,13 +2264,98 @@ body {
   .cards-section__item-wrap:nth-child(n+3) {
     margin-top: 24px;
   }
-}
 
-@media (max-width: 992px) {
-  .container {
-    max-width: 767px;
+  .about-us__img {
+    background-position: center right 25%;
   }
 
+  .about-us__main {
+    width: 50%;
+  }
+
+  .slider--price-comparison .slider__btn {
+    width: 55px;
+    height: 55px;
+    top: 255px;
+  }
+
+  .buying-process__steps-num {
+    font-size: 70px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+  }
+
+  .buying-process__steps-title {
+    font-size: 32px;
+  }
+
+  .buying-process__substeps {
+    margin-left: 20%;
+  }
+
+  .guarantees__item {
+    width: 50%;
+  }
+
+  .guarantees__item:nth-child(n+3) {
+    margin-top: 24px;
+  }
+
+  .advantages-main__item-title {
+    font-size: 28px;
+  }
+
+  .advantages-main__item-descr {
+    font-size: 18px;
+  }
+
+  .advantages-main__item-inner {
+    padding: 32px 28px;
+  }
+
+  .price-comparison__main {
+    padding: 35px 0;
+  }
+
+  .price-comparison__car-card-wrap {
+    width: 40%;
+  }
+
+  .price-comparison__slide-inner:before {
+    font-size: 37px;
+  }
+
+  .price-comparison__advantages-block-inner {
+    padding: 42px 40px 36px 42px;
+  }
+
+  .price-comparison__advantages-terms-about {
+    font-size: 22px;
+  }
+
+  .price-comparison__advantages-terms-num--lg {
+    font-size: 42px;
+  }
+
+  .banner-3__tooltip-num {
+    font-size: 32px;
+  }
+
+  .calculation__feedback {
+    width: 44%;
+  }
+
+  .calculation__feedback-advantages {
+    width: 52%;
+  }
+
+  .calculation__feedback-advantages-title {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 991.5px) {
   .header {
     padding-top: 10px;
   }
@@ -800,19 +2421,20 @@ body {
   }
 
   .header-menu__nav {
-    margin-right: 0px;
+    margin: 0px;
   }
 
   .header-menu__list {
     display: block;
   }
 
-  .header-menu__item {
-    text-align: center;
+  .header-menu__item:first-child {
+    margin-top: 0px;
   }
 
-  .header-menu__item + .header-menu__item {
-    margin-left: 0px;
+  .header-menu__item {
+    text-align: center;
+    margin: 0px;
     margin-top: 40px;
   }
 
@@ -903,10 +2525,12 @@ body {
 
   .header__contact {
     margin-top: 60px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   .header__social {
-    margin-right: 0px;
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
     order: 2;
@@ -921,6 +2545,12 @@ body {
     fill: #F50E30;
   }
 
+  .banner__btn {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 14px 40px;
+  }
+
   .banner__text {
     max-width: none;
     text-align: center;
@@ -931,12 +2561,6 @@ body {
 
   .banner__title {
     max-width: 695px;
-  }
-
-  .banner__btn {
-    font-size: 20px;
-    font-weight: 600;
-    padding: 14px 40px;
   }
 
   .banner__img {
@@ -950,7 +2574,7 @@ body {
   }
 
   .content-title {
-    font-size: 38px;
+    font-size: 35px;
   }
 
   .content-descr {
@@ -998,15 +2622,290 @@ body {
   .cards-section__item-wrap + .cards-section__item-wrap {
     margin-top: 20px;
   }
-}
 
-@media (max-width: 767px) {
-  .container {
-    max-width: 576px;
+  .about-us__img {
+    position: static;
+    width: 100%;
+    padding-bottom: 68%;
+    background-position: center;
+    max-width: none;
+    height: auto;
   }
 
+  .about-us__title {
+    margin-bottom: 20px;
+  }
+
+  .about-us__main {
+    width: 100%;
+    margin-left: 0px;
+    padding: 32px 0 64px 0;
+  }
+
+  .about-us__item-icon {
+    width: 44px;
+    height: 44px;
+    margin-right: 15px;
+  }
+
+  .about-us__item-icon-img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .slider--price-comparison .slider__btn {
+    top: 175px;
+  }
+
+  .slider--price-comparison .slider__btn--prev {
+    left: -20px;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+
+  .slider--price-comparison .slider__btn--next {
+    right: -20px;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+
+  .slider--banner-3 .slider__btn {
+    width: 55px;
+    height: 55px;
+  }
+
+  .what-cars__slider {
+    overflow: visible;
+  }
+
+  .what-cars__slider-btn {
+    display: none;
+  }
+
+  .car-card--what-cars .car-card__price-name {
+    max-width: 130px;
+  }
+
+  .banner-2__text {
+    margin-top: 20px;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+
+  .banner-2__descr {
+    margin-bottom: 44px;
+  }
+
+  .banner-2__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .buying-process__steps-num {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    margin-right: 34px;
+    font-size: 65px;
+  }
+
+  .buying-process__steps-title {
+    font-size: 30px;
+  }
+
+  .buying-process__substeps {
+    margin-left: 0%;
+  }
+
+  .download-link--lg .download-link__text {
+    font-size: 18px;
+  }
+
+  .guarantees__list {
+    margin: 0px 0px 32px 0px;
+  }
+
+  .guarantees__item {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .guarantees__item + .guarantees__item {
+    margin-top: 17px;
+  }
+
+  .guarantees__item-inner {
+    min-height: 117px;
+    padding: 20px 25px 20px 40px;
+  }
+
+  .guarantees__contract-info-link {
+    margin-top: 16px;
+  }
+
+  .guarantees__contract-info {
+    display: block;
+  }
+
+  .advantages-main__list {
+    display: block;
+  }
+
+  .advantages-main__item + .advantages-main__item {
+    margin-top: 17px;
+  }
+
+  .advantages-main__item {
+    width: 100%;
+  }
+
+  .advantages-main__item--lg {
+    width: 100%;
+  }
+
+  .price-comparison__main {
+    background-color: transparent;
+    padding: 0px;
+    margin-bottom: 80px;
+  }
+
+  .price-comparison__slide {
+    padding: 0 45px;
+  }
+
+  .price-comparison__car-card-wrap {
+    width: 48.5%;
+  }
+
+  .price-comparison__car-card-wrap + .price-comparison__car-card-wrap {
+    margin-left: 0px;
+  }
+
+  .price-comparison__slide-inner {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .price-comparison__slide-inner:before {
+    display: none;
+  }
+
+  .price-comparison__slider-main {
+    margin: 0 -45px;
+  }
+
+  .price-comparison__advantages {
+    display: block;
+  }
+
+  .price-comparison__advantages-block {
+    width: 100%;
+  }
+
+  .price-comparison__advantages-block + .price-comparison__advantages-block {
+    margin-top: 24px;
+  }
+
+  .price-comparison__advantages-block-inner {
+    padding: 42px;
+  }
+
+  .price-comparison__advantages-terms-about {
+    font-size: 20px;
+  }
+
+  .banner-3__text {
+    max-width: 100%;
+  }
+
+  .banner-3__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .banner-3__main {
+    display: block;
+  }
+
+  .banner-3__tooltip {
+    margin-left: 0px;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    margin-top: 20px;
+  }
+
+  .banner-3__btn-wrap {
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+    margin-bottom: 0px;
+  }
+
+  .banner-3__slider-wrap {
+    margin-top: 32px;
+  }
+
+  .calculation__feedback {
+    width: 100%;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    margin-top: 24px;
+  }
+
+  .calculation__feedback-title {
+    font-size: 35px;
+    margin-bottom: 24px;
+  }
+
+  .calculation__feedback-advantages {
+    width: 100%;
+  }
+
+  .calculation__feedback-advantages-title {
+    margin-bottom: 24px;
+  }
+
+  .calculation__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .footer {
+    padding-top: 80px;
+  }
+
+  .footer__contact-item {
+    width: 50%;
+  }
+
+  .footer__contact-item:nth-child(n+3) {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 767.5px) {
   .btn-primary {
     width: 100%;
+  }
+
+  .banner__btn {
+    width: 100%;
+    margin-top: 32px;
   }
 
   .banner__title {
@@ -1020,11 +2919,6 @@ body {
     margin-bottom: 0px;
   }
 
-  .banner__btn {
-    width: 100%;
-    margin-top: 32px;
-  }
-
   .banner__inner {
     padding: 29px 0 64px 0;
   }
@@ -1036,7 +2930,7 @@ body {
   }
 
   .content-title {
-    font-size: 35px;
+    font-size: 32px;
   }
 
   .content-descr {
@@ -1090,11 +2984,237 @@ body {
   .cards-section__item-descr {
     max-width: none;
   }
+
+  .about-us__item + .about-us__item {
+    margin-top: 16px;
+  }
+
+  .about-us__item-text {
+    font-size: 18px;
+  }
+
+  .about-us__list {
+    margin-top: 20px;
+  }
+
+  .slider--price-comparison .slider__btn {
+    display: none;
+  }
+
+  .car-card--what-cars .car-card__price-name {
+    max-width: 100%;
+  }
+
+  .buying-process__steps-header {
+    padding: 24px 0;
+  }
+
+  .buying-process__steps-num {
+    font-size: 52px;
+    margin-right: 25px;
+  }
+
+  .buying-process__steps-title {
+    font-size: 25px;
+  }
+
+  .buying-process__steps-arrow {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 44px;
+    flex: 0 0 44px;
+    height: 44px;
+  }
+
+  .buying-process__steps-arrow-icon {
+    width: 10px;
+    height: 23px;
+  }
+
+  .buying-process__steps-content {
+    padding-bottom: 24px;
+  }
+
+  .buying-process__substeps-item {
+    display: block;
+  }
+
+  .buying-process__substeps-name {
+    margin-bottom: 16px;
+  }
+
+  .buying-process__substeps-download-link {
+    margin-top: 4px;
+  }
+
+  .advantages__title {
+    margin-bottom: 32px;
+  }
+
+  .guarantees__list {
+    margin: 0px 0px 20px 0px;
+  }
+
+  .guarantees__item + .guarantees__item {
+    margin-top: 12px;
+  }
+
+  .guarantees__item-inner {
+    min-height: 100px;
+  }
+
+  .guarantees__item-icon {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 44px;
+    flex: 0 0 44px;
+    height: 44px;
+  }
+
+  .guarantees__item-icon-img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .guarantees__item-text {
+    font-size: 20px;
+  }
+
+  .guarantees__contract-info-descr {
+    font-size: 20px;
+  }
+
+  .advantages-main__item-title {
+    font-size: 24px;
+  }
+
+  .price-comparison__header {
+    margin-bottom: 32px;
+  }
+
+  .price-comparison__main {
+    margin-bottom: 65px;
+  }
+
+  .price-comparison__slider-pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .price-comparison__car-card-wrap {
+    width: 100%;
+  }
+
+  .price-comparison__car-card-wrap + .price-comparison__car-card-wrap {
+    margin-top: 40px;
+  }
+
+  .price-comparison__car-card-name {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .price-comparison__slide-inner {
+    display: block;
+  }
+
+  .price-comparison__btn-wrap {
+    margin-top: 32px;
+  }
+
+  .price-comparison__slider-main {
+    padding-bottom: 20px;
+  }
+
+  .price-comparison__advantages-block-inner {
+    padding: 32px;
+  }
+
+  .price-comparison__advantages-terms-about {
+    font-size: 18px;
+  }
+
+  .price-comparison__advantages-terms-num {
+    font-size: 22px;
+    margin-top: 7px;
+  }
+
+  .price-comparison__advantages-terms-num--lg {
+    font-size: 35px;
+  }
+
+  .price-comparison__advantages-terms-item + .price-comparison__advantages-terms-item {
+    margin-top: 20px;
+  }
+
+  .banner-3__slider {
+    overflow: visible;
+    margin: 0;
+  }
+
+  .banner-3__slider-pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 20px;
+  }
+
+  .banner-3__slider-btn {
+    display: none;
+  }
+
+  .calculation__feedback {
+    margin-top: 12px;
+    padding: 32px 24px;
+  }
+
+  .calculation__feedback-title {
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+
+  .calculation__feedback-advantages {
+    padding: 32px 24px;
+  }
+
+  .calculation__feedback-advantages-title {
+    margin-bottom: 20px;
+  }
+
+  .calculation__feedback-advantages-item + .calculation__feedback-advantages-item {
+    margin-top: 20px;
+  }
+
+  .calculation__feedback-advantages-icon {
+    margin-right: 16px;
+  }
+
+  .calculation__feedback-advantages-text {
+    font-size: 18px;
+  }
+
+  .footer {
+    padding-top: 65px;
+  }
+
+  .footer__contact-list {
+    margin-bottom: 32px;
+  }
+
+  .footer__contact-name {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .footer__contact-text {
+    font-size: 18px;
+  }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575.5px) {
   .container {
-    max-width: 479px;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: none;
   }
 
   .banner__title {
@@ -1125,6 +3245,152 @@ body {
   .cards-section__item-wrap + .cards-section__item-wrap {
     margin-top: 12px;
   }
+
+  .about-us {
+    padding-top: 68%;
+  }
+
+  .about-us__img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+  }
+
+  .slider__pagination-item {
+    max-width: 70px;
+  }
+
+  .car-card--what-cars {
+    padding: 20px 16px;
+  }
+
+  .buying-process__steps-title {
+    font-size: 20px;
+  }
+
+  .guarantees__item-inner {
+    padding: 20px 24px;
+  }
+
+  .guarantees__item-text {
+    font-size: 18px;
+  }
+
+  .guarantees__contract-info-descr {
+    font-size: 18px;
+  }
+
+  .advantages-main__item-title {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .price-comparison__advantages-block-inner {
+    padding: 32px 24px;
+  }
+
+  .price-comparison__advantages-terms-num {
+    font-size: 20px;
+  }
+
+  .price-comparison__advantages-terms-num--lg {
+    font-size: 32px;
+  }
+
+  .banner-3__tooltip {
+    font-size: 18px;
+    padding: 16px 26px;
+  }
+
+  .banner-3__tooltip-num {
+    font-size: 28px;
+  }
+
+  .calculation__feedback-title {
+    font-size: 28px;
+  }
+
+  .calculation__feedback-advantages-item + .calculation__feedback-advantages-item {
+    margin-top: 16px;
+  }
+
+  .calculation__feedback-advantages-text {
+    font-size: 16px;
+  }
+
+  .footer__contact {
+    margin-bottom: 24px;
+  }
+
+  .footer__contact-item {
+    width: 100%;
+  }
+
+  .footer__contact-item + .footer__contact-item {
+    margin-top: 28px;
+  }
+
+  .footer__contact-title {
+    margin-bottom: 20px;
+  }
+
+  .footer__bottom-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 26px;
+  }
+
+  .footer__bottom-menu-link + .footer__bottom-menu-link {
+    margin-left: 0px;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .advantages-main__item-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .car-card--what-cars .car-card__price-name {
+    margin-bottom: 7px;
+    text-align: center;
+  }
+
+  .car-card--what-cars .car-card__price-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .car-card--what-cars .car-card__price-item + .car-card__price-item {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .download-link--lg .download-link__text {
+    font-size: 16px;
+  }
+
+  .guarantees__item-text {
+    font-size: 16px;
+  }
+
+  .guarantees__contract-info-descr {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 375px) {
@@ -1136,10 +3402,26 @@ body {
     font-size: 20px;
     padding-left: 120px;
   }
+
+  .calculation__feedback-title {
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 374px) {
   .banner__title {
     font-size: 28px;
+  }
+}
+
+@media (max-wdith: 576px) {
+  .what-cars__header {
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-wdith: 767px) {
+  .footer__contact-item:nth-child(n+3) {
+    margin-top: 28px;
   }
 }

@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>Document</title>
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -28,67 +29,68 @@
                         <nav class="header-menu__nav">
                             <ul class="header-menu__list">
                                 <li class="header-menu__item">
-                                    <a href="#" class="header-menu__link">О нас</a>
+                                    <a href=".about-us" class="header-menu__link scroll-link">О нас</a>
                                 </li>
                                 <li class="header-menu__item">
-                                    <a href="#" class="header-menu__link">Услуги</a>
+                                    <a href=".what-cars" class="header-menu__link scroll-link">Услуги</a>
                                 </li>
                                 <li class="header-menu__item">
-                                    <a href="#" class="header-menu__link header-menu__link--active">Как купить</a>
+                                    <a href=".buying-process" class="header-menu__link scroll-link">Как купить</a>
                                 </li>
                                 <li class="header-menu__item">
-                                    <a href="#" class="header-menu__link">Преимущества</a>
+                                    <a href=".advantages" class="header-menu__link scroll-link">Преимущества</a>
                                 </li>
                                 <li class="header-menu__item">
-                                    <a href="#" class="header-menu__link">Отзывы</a>
-                                </li>
-                                <li class="header-menu__item">
-                                    <a href="#" class="header-menu__link">Контакты</a>
+                                    <a href=".calculation" class="header-menu__link scroll-link">Контакты</a>
                                 </li>
                             </ul>
                         </nav>
                         <div class="header__contact">
-                            <div class="header__social">
-                                <a href="#" class="header__social-link">
-                                    <svg class="header__social-icon">
-                                        <use href="img/sprite.svg#telegram-icon"></use>
-                                    </svg>
-                                </a>
-                                <a href="#" class="header__social-link">
-                                    <svg class="header__social-icon">
-                                        <use href="img/sprite.svg#whatsapp-icon"></use>
-                                    </svg>
-                                </a>
-                                <a href="#" class="header__social-link">
+                            <ul class="header__social">
+                                <li class="header__social-item">
+                                    <a href="#" class="header__social-link">
+                                        <svg class="header__social-icon">
+                                            <use href="img/sprite.svg#telegram-icon"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="header__social-item">
+                                    <a href="#" class="header__social-link">
+                                        <svg class="header__social-icon">
+                                            <use href="img/sprite.svg#whatsapp-icon"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="header__social-item">
+                                    <a href="#" class="header__social-link">
                                     <svg class="header__social-icon">
                                         <use href="img/sprite.svg#youtube-icon"></use>
                                     </svg>
                                 </a>
-                                
-                            </div>
+                                </li>
+                            </ul>
                             <div class="header__numbers">
-                                <a href="tel:+7852675252" class="header__numbers-item">
+                                <a href="tel:380971837474" class="header__numbers-item">
                                     <div class="header__numbers-icon">
                                         <svg class="header__numbers-icon-img">
                                             <use href="img/sprite.svg#phone-icon"></use>
                                         </svg>
                                     </div>
-                                    <span class="header__numbers-num">+7 (8352) 67-52-52</span>
+                                    <span class="header__numbers-num">+38 097 183 7474</span>
                                 </a>
-                                <a href="tel:+79279971242" class="header__numbers-item">
+                                <a href="tel:380982343254" class="header__numbers-item">
                                     <div class="header__numbers-icon">
                                         <svg class="header__numbers-icon-img">
                                             <use href="img/sprite.svg#phone-icon"></use>
                                         </svg>
                                     </div>
-                                    <span class="header__numbers-num">+7 (927) 997-12-42</span>
+                                    <span class="header__numbers-num">+38 098 234 3254</span>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </header>
     <main>
@@ -99,7 +101,7 @@
                         <h1 class="banner__title">Купите автомобиль дешевле на 60%*</h1>
                         <div class="banner__img"></div>
                         <p class="banner__descr">Привезем автомобиль под ключ со всеми документами. <br> Подбор автомобиля под любой запрос БЕСПЛАТНО</p>
-                        <button href="#" class="banner__btn btn-primary">Оставить заявку</button>
+                        <button class="banner__btn btn-primary">Оставить заявку</button>
                     </div>
                 </div>
             </div>
@@ -112,36 +114,1110 @@
                         <p class="cards-section__descr content-descr">Предлагаем Вам купить автомобиль дешевле и лучше, но за тот же бюджет</p>
                     </div>
                     <div class="cards-section__btn-wrap">
-                        <button href="#" class="cards-section__btn btn-primary">Оставить заявку</button>
+                        <button class="cards-section__btn btn-primary">Оставить заявку</button>
                     </div>
-                    <div class="cards-section__list">
-                        <div class="cards-section__item-wrap">
+                    <ul class="cards-section__list">
+                        <li class="cards-section__item-wrap">
                             <div class="cards-section__item cards-section__item--bg-1">
                                 <h3 class="cards-section__item-title">С пробегом</h3>
                                 <p class="cards-section__item-descr">Подберем и доставим для Вас автомобиль в отличном состоянии и минимальным пробегом.</p>
-                                <!-- <img src="img/cards-section/img-1.png" class="cards-section__item-img" alt="cards image"> -->
                             </div>
-                        </div>
-                        <div class="cards-section__item-wrap">
+                        </li>
+                        <li class="cards-section__item-wrap">
                             <div class="cards-section__item cards-section__item--bg-2">
                                 <h3 class="cards-section__item-title">Новые</h3>
                                 <p class="cards-section__item-descr">Подберем и доставим Вам автомобиль на прямую от дилера.</p>
-                                <!-- <img src="img/cards-section/img-2.png" class="cards-section__item-img" alt="cards image"> -->
                             </div>
-                        </div>
-                        <div class="cards-section__item-wrap">
+                        </li>
+                        <li class="cards-section__item-wrap">
                             <div class="cards-section__item cards-section__item--bg-3">
                                 <h3 class="cards-section__item-title">Под ваш бюджет</h3>
                                 <p class="cards-section__item-descr">Подберем желаемый автомобиль под Ваш бюджет. Минимальный бюджет от 1,3 млн.</p>
-                                <!-- <img src="img/cards-section/img-3.png" class="cards-section__item-img" alt="cards image"> -->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="about-us">
+            <div class="container">
+                <div class="about-us__inner">
+                    <div class="about-us__img"></div>
+                    <div class="about-us__main">
+                    <h2 class="about-us__title content-title">О нас</h2>
+                    <p class="about-us__descr content-descr">Мы автосалон и официальный партнер крупнейших мировых авто-аукционов: IAA (Insurance Auto Auction), Copart, Manheim.</p>
+                    <ul class="about-us__list">
+                            <li class="about-us__item">
+                                <div class="about-us__item-icon">
+                                    <svg class="about-us__item-icon-img">
+                                        <use href="img/sprite.svg#car-icon"></use>
+                                    </svg>
+                                </div>
+                                <span class="about-us__item-text">Работаем без посредников</span>
+                            </li>
+                            <li class="about-us__item">
+                                <div class="about-us__item-icon">
+                                    <svg class="about-us__item-icon-img">
+                                        <use href="img/sprite.svg#success-icon"></use>
+                                    </svg>
+                                </div>
+                                <span class="about-us__item-text">Успешный опыт 10 лет</span>
+                            </li>
+                            <li class="about-us__item">
+                                <div class="about-us__item-icon">
+                                    <svg class="about-us__item-icon-img">
+                                        <use href="img/sprite.svg#truck-icon"></use>
+                                    </svg>
+                                </div>
+                                <span class="about-us__item-text">Отлаженная логистика</span>
+                            </li>
+                        </ul>
+                        <div class="about-us__prompt">
+                            <p class="about-us__prompt-text">Мы берем на себя полное сопровождение сделки до передачи автомобиля в руки клиенту. </p>
+                        </div>
+                        <div class="about-us__btn-wrap">
+                            <button class="btn-primary">Оставить заявку</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="what-cars section">
+            <div class="container">
+                <div class="what-cars__header">
+                    <h2 class="what-cars__title content-title">Какие авто привозим?</h2>
+                    <p class="what-cars__descr content-descr">Привозим авто не старше 7 лет на момент растаможки.</p>
+                </div>
+                <div class="what-cars__slider-wrap slider slider--what-cars">
+                    <div class="what-cars__slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="what-cars__slider-item swiper-slide">
+                                <article class="car-card car-card--what-cars">
+                                    <div class="car-card__img" style="background-image: url(img/car-images/Toyota-RAV4-2022.jpg);"></div>
+                                    <h3 class="car-card__name">Toyota RAV4 2022</h3>
+                                    <ul class="car-card__features">
+                                        <li class="car-card__features-item">
+                                            <div class="car-card__features-name car-card__features-text">
+                                                <span>Пробег</span>
+                                            </div>
+                                            <div class="car-card__features-value car-card__features-text">
+                                                <span>24 000 км</span>
+                                            </div>
+                                        </li>
+                                        <li class="car-card__features-item">
+                                            <div class="car-card__features-name car-card__features-text">
+                                                <span>Объем двигателя</span>
+                                            </div>
+                                            <div class="car-card__features-value car-card__features-text">
+                                                <span>2.5</span>
+                                            </div>
+                                        </li>
+                                        <li class="car-card__features-item">
+                                            <div class="car-card__features-name car-card__features-text">
+                                                <span>Мощность</span>
+                                            </div>
+                                            <div class="car-card__features-value car-card__features-text">
+                                                <span>149 л.с.</span>
+                                            </div>
+                                        </li>
+                                        <li class="car-card__features-item">
+                                            <div class="car-card__features-name car-card__features-text">
+                                                <span>Коробка</span>
+                                            </div>
+                                            <div class="car-card__features-value car-card__features-text">
+                                                <span>Автомат</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="car-card__price">
+                                        <li class="car-card__price-item">
+                                            <span class="car-card__price-name">Цена на вторичном рынке</span>
+                                            <span class="car-card__price-num">1 200 000 ₴</span>
+                                        </li>
+                                        <li class="car-card__price-item">
+                                            <span class="car-card__price-name">Цена автомобиля “под ключ”</span>
+                                            <span class="car-card__price-num car-card__price-num--color">1 039 999 ₴</span>
+                                        </li>
+                                    </ul>
+                                    <div class="car-card__btn-wrap">
+                                        <button class="car-card__btn btn-primary">Оставить заявку</button>
+                                    </div>
+                                </artice>
+                            </div>
+                            <div class="what-cars__slider-item swiper-slide">
+                                <article class="car-card car-card--what-cars">
+                                    <div class="car-card__img" style="background-image: url(img/car-images/Audi-Q5-2021.jpg);"></div>
+                                    <h3 class="car-card__name">Audi Q5 2021</h3>
+                                    <ul class="car-card__features">
+                                        <li class="car-card__features-item">
+                                            <div class="car-card__features-name car-card__features-text">
+                                                <span>Пробег</span>
+                                            </div>
+                                            <div class="car-card__features-value car-card__features-text">
+                                                <span>65 000 км</span>
+                                            </div>
+                                        </li>
+                                        <li class="car-card__features-item">
+                                            <div class="car-card__features-name car-card__features-text">
+                                                <span>Объем двигателя</span>
+                                            </div>
+                                            <div class="car-card__features-value car-card__features-text">
+                                                <span>2</span>
+                                            </div>
+                                        </li>
+                                        <li class="car-card__features-item">
+                                            <div class="car-card__features-name car-card__features-text">
+                                                <span>Мощность</span>
+                                            </div>
+                                            <div class="car-card__features-value car-card__features-text">
+                                                <span>249 л.с.</span>
+                                            </div>
+                                        </li>
+                                        <li class="car-card__features-item">
+                                            <div class="car-card__features-name car-card__features-text">
+                                                <span>Коробка</span>
+                                            </div>
+                                            <div class="car-card__features-value car-card__features-text">
+                                                <span>Автомат</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="car-card__price">
+                                        <li class="car-card__price-item">
+                                            <span class="car-card__price-name">Цена на вторичном рынке</span>
+                                            <span class="car-card__price-num">1 500 000 ₴</span>
+                                        </li>
+                                        <li class="car-card__price-item">
+                                            <span class="car-card__price-name">Цена автомобиля “под ключ”</span>
+                                            <span class="car-card__price-num car-card__price-num--color">1 399 999 ₴</span>
+                                        </li>
+                                    </ul>
+                                    <div class="car-card__btn-wrap">
+                                        <button class="car-card__btn btn-primary">Оставить заявку</button>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="what-cars__slider-item swiper-slide">
+                                <article class="car-card car-card--what-cars">
+                                    <div class="car-card__img" style="background-image: url(img/car-images/Honda-CR-V-2021.jpg);"></div>
+                                    <h3 class="car-card__name">Honda CR-V 2021</h3>
+                                    <ul class="car-card__features">
+                                        <li class="car-card__features-item">
+                                            <div class="car-card__features-name car-card__features-text">
+                                                <span>Пробег</span>
+                                            </div>
+                                            <div class="car-card__features-value car-card__features-text">
+                                                <span>16 000 км</span>
+                                            </div>
+                                        </li>
+                                        <li class="car-card__features-item">
+                                            <div class="car-card__features-name car-card__features-text">
+                                                <span>Объем двигателя</span>
+                                            </div>
+                                            <div class="car-card__features-value car-card__features-text">
+                                                <span>2.0</span>
+                                            </div>
+                                        </li>
+                                        <li class="car-card__features-item">
+                                            <div class="car-card__features-name car-card__features-text">
+                                                <span>Мощность</span>
+                                            </div>
+                                            <div class="car-card__features-value car-card__features-text">
+                                                <span>184 л.с.</span>
+                                            </div>
+                                        </li>
+                                        <li class="car-card__features-item">
+                                            <div class="car-card__features-name car-card__features-text">
+                                                <span>Коробка</span>
+                                            </div>
+                                            <div class="car-card__features-value car-card__features-text">
+                                                <span>Автомат</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="car-card__price">
+                                        <li class="car-card__price-item">
+                                            <span class="car-card__price-name">Цена на вторичном рынке</span>
+                                            <span class="car-card__price-num">2 000 000 ₴</span>
+                                        </li>
+                                        <li class="car-card__price-item">
+                                            <span class="car-card__price-name">Цена автомобиля “под ключ”</span>
+                                            <span class="car-card__price-num car-card__price-num--color">1 849 999 ₴</span>
+                                        </li>
+                                    </ul>
+                                    <div class="car-card__btn-wrap">
+                                        <button class="car-card__btn btn-primary">Оставить заявку</button>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="what-cars__slider-item swiper-slide">
+                                <article class="car-card car-card--what-cars">
+                                    <div class="car-card__img" style="background-image: url(img/car-images/Toyota-RAV4-2022.jpg);"></div>
+                                    <h3 class="car-card__name">Toyota RAV4 2022</h3>
+                                    <ul class="car-card__features">
+                                        <li class="car-card__features-item">
+                                            <div class="car-card__features-name car-card__features-text">
+                                                <span>Пробег</span>
+                                            </div>
+                                            <div class="car-card__features-value car-card__features-text">
+                                                <span>24 000 км</span>
+                                            </div>
+                                        </li>
+                                        <li class="car-card__features-item">
+                                            <div class="car-card__features-name car-card__features-text">
+                                                <span>Объем двигателя</span>
+                                            </div>
+                                            <div class="car-card__features-value car-card__features-text">
+                                                <span>2.5</span>
+                                            </div>
+                                        </li>
+                                        <li class="car-card__features-item">
+                                            <div class="car-card__features-name car-card__features-text">
+                                                <span>Мощность</span>
+                                            </div>
+                                            <div class="car-card__features-value car-card__features-text">
+                                                <span>149 л.с.</span>
+                                            </div>
+                                        </li>
+                                        <li class="car-card__features-item">
+                                            <div class="car-card__features-name car-card__features-text">
+                                                <span>Коробка</span>
+                                            </div>
+                                            <div class="car-card__features-value car-card__features-text">
+                                                <span>Автомат</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="car-card__price">
+                                        <li class="car-card__price-item">
+                                            <span class="car-card__price-name">Цена на вторичном рынке</span>
+                                            <span class="car-card__price-num">1 200 000 ₴</span>
+                                        </li>
+                                        <li class="car-card__price-item">
+                                            <span class="car-card__price-name">Цена автомобиля “под ключ”</span>
+                                            <span class="car-card__price-num car-card__price-num--color">1 039 999 ₴</span>
+                                        </li>
+                                    </ul>
+                                    <div class="car-card__btn-wrap">
+                                        <button class="car-card__btn btn-primary">Оставить заявку</button>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="what-cars__slider-item swiper-slide">
+                                <article class="car-card car-card--what-cars">
+                                    <div class="car-card__img" style="background-image: url(img/car-images/Audi-Q5-2021.jpg);"></div>
+                                    <h3 class="car-card__name">Audi Q5 2021</h3>
+                                    <ul class="car-card__features">
+                                        <li class="car-card__features-item">
+                                            <div class="car-card__features-name car-card__features-text">
+                                                <span>Пробег</span>
+                                            </div>
+                                            <div class="car-card__features-value car-card__features-text">
+                                                <span>65 000 км</span>
+                                            </div>
+                                        </li>
+                                        <li class="car-card__features-item">
+                                            <div class="car-card__features-name car-card__features-text">
+                                                <span>Объем двигателя</span>
+                                            </div>
+                                            <div class="car-card__features-value car-card__features-text">
+                                                <span>2</span>
+                                            </div>
+                                        </li>
+                                        <li class="car-card__features-item">
+                                            <div class="car-card__features-name car-card__features-text">
+                                                <span>Мощность</span>
+                                            </div>
+                                            <div class="car-card__features-value car-card__features-text">
+                                                <span>249 л.с.</span>
+                                            </div>
+                                        </li>
+                                        <li class="car-card__features-item">
+                                            <div class="car-card__features-name car-card__features-text">
+                                                <span>Коробка</span>
+                                            </div>
+                                            <div class="car-card__features-value car-card__features-text">
+                                                <span>Автомат</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="car-card__price">
+                                        <li class="car-card__price-item">
+                                            <span class="car-card__price-name">Цена на вторичном рынке</span>
+                                            <span class="car-card__price-num">1 500 000 ₴</span>
+                                        </li>
+                                        <li class="car-card__price-item">
+                                            <span class="car-card__price-name">Цена автомобиля “под ключ”</span>
+                                            <span class="car-card__price-num car-card__price-num--color">1 399 999 ₴</span>
+                                        </li>
+                                    </ul>
+                                    <div class="car-card__btn-wrap">
+                                        <button class="car-card__btn btn-primary">Оставить заявку</button>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="what-cars__slider-item swiper-slide">
+                                <article class="car-card car-card--what-cars">
+                                    <div class="car-card__img" style="background-image: url(img/car-images/Honda-CR-V-2021.jpg);"></div>
+                                    <h3 class="car-card__name">Honda CR-V 2021</h3>
+                                    <ul class="car-card__features">
+                                        <li class="car-card__features-item">
+                                            <div class="car-card__features-name car-card__features-text">
+                                                <span>Пробег</span>
+                                            </div>
+                                            <div class="car-card__features-value car-card__features-text">
+                                                <span>16 000 км</span>
+                                            </div>
+                                        </li>
+                                        <li class="car-card__features-item">
+                                            <div class="car-card__features-name car-card__features-text">
+                                                <span>Объем двигателя</span>
+                                            </div>
+                                            <div class="car-card__features-value car-card__features-text">
+                                                <span>2.0</span>
+                                            </div>
+                                        </li>
+                                        <li class="car-card__features-item">
+                                            <div class="car-card__features-name car-card__features-text">
+                                                <span>Мощность</span>
+                                            </div>
+                                            <div class="car-card__features-value car-card__features-text">
+                                                <span>184 л.с.</span>
+                                            </div>
+                                        </li>
+                                        <li class="car-card__features-item">
+                                            <div class="car-card__features-name car-card__features-text">
+                                                <span>Коробка</span>
+                                            </div>
+                                            <div class="car-card__features-value car-card__features-text">
+                                                <span>Автомат</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="car-card__price">
+                                        <li class="car-card__price-item">
+                                            <span class="car-card__price-name">Цена на вторичном рынке</span>
+                                            <span class="car-card__price-num">2 000 000 ₴</span>
+                                        </li>
+                                        <li class="car-card__price-item">
+                                            <span class="car-card__price-name">Цена автомобиля “под ключ”</span>
+                                            <span class="car-card__price-num car-card__price-num--color">1 849 999 ₴</span>
+                                        </li>
+                                    </ul>
+                                    <div class="car-card__btn-wrap">
+                                        <button class="car-card__btn btn-primary">Оставить заявку</button>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slider__btn slider__btn--prev what-cars__slider-btn what-cars__slider-btn-prev">
+                        <svg class="slider__btn-icon">
+                            <use href="img/sprite.svg#slider-arrow"></use>
+                        </svg>
+                    </button>
+                    <button class="slider__btn slider__btn--next what-cars__slider-btn what-cars__slider-btn-next">
+                        <svg class="slider__btn-icon">
+                            <use href="img/sprite.svg#slider-arrow"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="what-cars__pagination slider__pagination swiper-pagination"></div>
+            </div>
+        </section>
+        <section class="banner-2 section">
+            <div class="container">
+                <div class="banner-2__inner">
+                    <div class="banner-2__text">
+                        <h2 class="banner-2__title content-title">Мы советуем подбирать автомобиль с бюджетом от <mark class="banner-2__title-accent">1,3 млн</mark></h2>
+                        <p class="banner-2__descr">c учетом расходов на доставку, растаможку и наши услуги.</p>
+                        <button class="btn-primary">Оставить заявку</button>
+                    </div>
+                    <div class="banner-2__img-wrap">
+                        <img src="img/banner-2/img-1.jpg" alt="car" class="banner-2__img">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="buying-process section">
+            <div class="container">
+                <h2 class="buying-process__title content-title">Процесс покупки</h2>
+                <div class="buying-process__steps accordion accordion--scroll-top">
+                    <div class="buying-process__steps-item accordion-item">
+                        <div class="buying-process__steps-header  accordion-header process-accordion-btn">
+                            <div class="buying-process__steps-num">01</div>
+                            <div class="buying-process__steps-title">Подбор автомобиля</div>
+                            <div class="buying-process__steps-arrow process-accordion-btn__arrow">
+                                <svg class="buying-process__steps-arrow-icon">
+                                    <use href="img/sprite.svg#slider-arrow"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="buying-process__steps-content accordion-content">
+                            <div class="buying-process__substeps">
+                                <div class="buying-process__substeps-item">
+                                    <h3 class="buying-process__substeps-name">Консультация</h3>
+                                    <div class="buying-process__substeps-main">
+                                        <p class="buying-process__substeps-descr">Индивидуальный подход и консультация от опытных специалистов по всем вопросам, связанным с выбором, доставкой и стоимостью автомобиля и другими расходами.</p>
+                                    </div>
+                                </div>
+                                <div class="buying-process__substeps-item">
+                                    <h3 class="buying-process__substeps-name">Предварительный договор</h3>
+                                    <div class="buying-process__substeps-main">
+                                        <p class="buying-process__substeps-descr">Подписывается предварительный договор, на подбор автомобиля согласно вашим требованиям, на условиях: Депозитный платеж 1000$</p>
+                                        <a href="#" class="buying-process__substeps-download-link download-link">
+                                            <svg class="download-link__icon">
+                                                <use href="img/sprite.svg#download-icon"></use>
+                                            </svg>
+                                            <span class="download-link__text">Скачать пример договора</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="buying-process__substeps-item">
+                                    <h3 class="buying-process__substeps-name">Подбор автомобиля</h3>
+                                    <div class="buying-process__substeps-main">
+                                        <p class="buying-process__substeps-descr">Ваш персональный менеджер ведете поиск автомобиля, на площадках наших партнеров. Период поиска автомобиля в среднем занимает 2 недели </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buying-process__steps-item accordion-item">
+                        <div class="buying-process__steps-header  accordion-header process-accordion-btn">
+                            <div class="buying-process__steps-num">02</div>
+                            <div class="buying-process__steps-title">Покупка</div>
+                            <div class="buying-process__steps-arrow process-accordion-btn__arrow">
+                                <svg class="buying-process__steps-arrow-icon">
+                                    <use href="img/sprite.svg#slider-arrow"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="buying-process__steps-content accordion-content">
+                            <div class="buying-process__substeps">
+                                <div class="buying-process__substeps-item">
+                                    <h3 class="buying-process__substeps-name">История автомобиля</h3>
+                                    <div class="buying-process__substeps-main">
+                                        <p class="buying-process__substeps-descr">Все автомобили из США проходят VIN проверку специалистами Carmark на соответствие документов, историю ДТП, технического состояния, полноты комплектации. (autocheck, carfax)</p>
+                                    </div>
+                                </div>
+                                <div class="buying-process__substeps-item">
+                                    <h3 class="buying-process__substeps-name">Участие в аукционе</h3>
+                                    <div class="buying-process__substeps-main">
+                                        <p class="buying-process__substeps-descr">После согласования марки и бюджета автомобиля, ваш менеджер участвует в торгах</p>
+                                    </div>
+                                </div>
+                                <div class="buying-process__substeps-item">
+                                    <h3 class="buying-process__substeps-name">Основной договор</h3>
+                                    <div class="buying-process__substeps-main">
+                                        <p class="buying-process__substeps-descr">После выигрыша автомобиля на аукционе, подписывается основной договор, который предусматривает: определение окончательной стоимость машины с доставкой в Россию (без ремонта), оплату, права, обязанности сторон и сроки доставки</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buying-process__steps-item accordion-item">
+                        <div class="buying-process__steps-header  accordion-header process-accordion-btn">
+                            <div class="buying-process__steps-num">03</div>
+                            <div class="buying-process__steps-title">Доставка в ваш город</div>
+                            <div class="buying-process__steps-arrow process-accordion-btn__arrow">
+                                <svg class="buying-process__steps-arrow-icon">
+                                    <use href="img/sprite.svg#slider-arrow"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="buying-process__steps-content accordion-content">
+                            <div class="buying-process__substeps">
+                                <div class="buying-process__substeps-item">
+                                    <h3 class="buying-process__substeps-name">Доставка по Америке</h3>
+                                    <div class="buying-process__substeps-main">
+                                        <p class="buying-process__substeps-descr">Автомобиль доставляется с аукциона в соответствующийпорт и сразу после прибытия, покупателю предоставляются дополнительные фотографии автомобиля. Все транспортные расходы включены в итоговую цену в основном договоре</p>
+                                    </div>
+                                </div>
+                                <div class="buying-process__substeps-item">
+                                    <h3 class="buying-process__substeps-name">Страхование</h3>
+                                    <div class="buying-process__substeps-main">
+                                        <p class="buying-process__substeps-descr">Весь период транспортировки и доставки автомобиля. Груз застрахован (А class) ведущими страховыми компаниями. Стоимость страховки включена в итоговую цену в основном договоре</p>
+                                    </div>
+                                </div>
+                                <div class="buying-process__substeps-item">
+                                    <h3 class="buying-process__substeps-name">Морская перевозка</h3>
+                                    <div class="buying-process__substeps-main">
+                                        <p class="buying-process__substeps-descr">Автомобиль загружается в контейнер, по номеру которогоВы можете отслеживать движение вашего груза</p>
+                                    </div>
+                                </div>
+                                <div class="buying-process__substeps-item">
+                                    <h3 class="buying-process__substeps-name">Таможенная очистка</h3>
+                                    <div class="buying-process__substeps-main">
+                                        <p class="buying-process__substeps-descr">Автомобиль выгружается из контейнера в присутствиинаших специалистов и проходит таможенное оформлениес помощью нашей брокерской организацией</p>
+                                    </div>
+                                </div>
+                                <div class="buying-process__substeps-item">
+                                    <h3 class="buying-process__substeps-name">Выдача авто</h3>
+                                    <div class="buying-process__substeps-main">
+                                        <p class="buying-process__substeps-descr">Уже растаможенный автомобиль передается Вам на основании договора купли-продажикоторый даёт право как собственнику ТС,поставить на учёт в ГИБДД Российской Федерации</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <div class="advantages">
+            <div class="container">
+                <section class="guarantees">
+                    <h2 class="advantages__title content-title">Наши гарантии</h2>
+                    <ul class="guarantees__list">
+                        <li class="guarantees__item">
+                            <div class="guarantees__item-inner">
+                                <div class="guarantees__item-icon">
+                                    <svg class="guarantees__item-icon-img">
+                                        <use href="img/sprite.svg#refund-icon"></use>
+                                    </svg>
+                                </div>
+                                <div class="guarantees__item-text">100% возврат предоплаты </div>
+                            </div>
+                        </li>
+                        <li class="guarantees__item">
+                            <div class="guarantees__item-inner">
+                                <div class="guarantees__item-icon">
+                                    <svg class="guarantees__item-icon-img">
+                                        <use href="img/sprite.svg#contract-icon"></use>
+                                    </svg>
+                                </div>
+                                <div class="guarantees__item-text">Работаем по договору </div>
+                            </div>
+                        </li>
+                        <li class="guarantees__item">
+                            <div class="guarantees__item-inner">
+                                <div class="guarantees__item-icon">
+                                    <svg class="guarantees__item-icon-img">
+                                        <use href="img/sprite.svg#contract-find-icon"></use>
+                                    </svg>
+                                </div>
+                                <div class="guarantees__item-text">Договор без мелкого шрифта</div>
+                            </div>
+                        </li>
+                        <li class="guarantees__item">
+                            <div class="guarantees__item-inner">
+                                <div class="guarantees__item-icon">
+                                    <svg class="guarantees__item-icon-img">
+                                        <use href="img/sprite.svg#pay-icon"></use>
+                                    </svg>
+                                </div>
+                                <div class="guarantees__item-text">Оплата в кассу нашего автосалона или на р/с компании</div>
+                            </div>
+                        </li>
+                        <li class="guarantees__item">
+                            <div class="guarantees__item-inner">
+                                <div class="guarantees__item-icon">
+                                    <svg class="guarantees__item-icon-img">
+                                        <use href="img/sprite.svg#car-quality-icon"></use>
+                                    </svg>
+                                </div>
+                                <div class="guarantees__item-text">Качество автомобиля</div>
+                            </div>
+                        </li>
+                        <li class="guarantees__item">
+                            <div class="guarantees__item-inner">
+                                <div class="guarantees__item-icon">
+                                    <svg class="guarantees__item-icon-img">
+                                        <use href="img/sprite.svg#protection-icon"></use>
+                                    </svg>
+                                </div>
+                                <div class="guarantees__item-text">На всех этапах сделки - автомобили застрахованы</div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="guarantees__contract-info">
+                        <p class="guarantees__contract-info-descr">Вы можете убедиться в прозрачности сделки скачав предварительный договор</p>
+                        <a href="#" class="guarantees__contract-info-link download-link download-link--lg">
+                            <svg class="download-link__icon">
+                                <use href="img/sprite.svg#download-icon"></use>
+                            </svg>
+                            <span class="download-link__text">Скачать пример договора</span>
+                        </a>
+                    </div>
+                </section>
+                <section class="advantages-main section">
+                    <h2 class="advantages__title content-title">Преимущества авто из США</h2>
+                    <div class="advantages-main__list">
+                        <div class="advantages-main__item advantages-main__item--lg">
+                            <div class="advantages-main__item-inner">
+                                <h3 class="advantages-main__item-title">Высокое качество</h3>
+                                <p class="advantages-main__item-descr">Одним из главных аргументов в пользу выбора автомобиля из США, является то, что все местные машины обладают высоким качеством сборкии оснащенности. А так же высоким качеством лакокрасочного покрытия.</p>
+                            </div>
+                        </div>
+                        <div class="advantages-main__item">
+                            <div class="advantages-main__item-inner">
+                                <h3 class="advantages-main__item-title">Богатая комплектация</h3>
+                                <p class="advantages-main__item-descr">Автомобили из США отличаются богатыми комплектациями, а также отменным техническим состоянием всех узлов и агрегатов.</p>
+                            </div>
+                        </div>
+                        <div class="advantages-main__item">
+                            <div class="advantages-main__item-inner">
+                                <h3 class="advantages-main__item-title">Низкая цена</h3>
+                                <p class="advantages-main__item-descr">Стоимость поддержанного автомобиля из США значительно дешевле автомобиля на российском рынке даже с учетом расходов на растаможивание и доставку.</p>
+                            </div>
+                        </div>
+                        <div class="advantages-main__item advantages-main__item--lg">
+                            <div class="advantages-main__item-inner">
+                                <h3 class="advantages-main__item-title">Отличное состояние</h3>
+                                <p class="advantages-main__item-descr">Состояние подержанных автомобилей идеальное. В США отличные условия эксплуатации транспорта, хорошие дороги и отменный сервис.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <section class="price-comparison section">
+            <div class="container">
+                <div class="price-comparison__header">
+                    <h2 class="price-comparison__title content-title">Сравните цены</h2>
+                    <p class="price-comparison__descr content-descr">Привезенные нами автомобили значительно дешевле рыночной цены</p>
+                </div>
+                <div class="price-comparison__main slider slider--price-comparison">
+                    <div class="price-comparison__slider-main swiper ">
+                        <div class="swiper-wrapper">
+                            <div class="price-comparison__slide swiper-slide">
+                                <div class="price-comparison__slide-inner">
+                                    <div class="price-comparison__car-card-wrap">
+                                        <div class="price-comparison__car-card-name">Наша цена</div>
+                                        <article class="car-card car-card--price-comparison car-card--color-shadow">
+                                            <div class="car-card__img" style="background-image: url(img/car-images/Toyota-RAV4-2022.jpg);"></div>
+                                            <h3 class="car-card__name">Toyota RAV4 2022</h3>
+                                            <ul class="car-card__features">
+                                                <li class="car-card__features-item">
+                                                    <div class="car-card__features-name car-card__features-text">
+                                                        <span>Пробег</span>
+                                                    </div>
+                                                    <div class="car-card__features-value car-card__features-text">
+                                                        <span>24 000 км</span>
+                                                    </div>
+                                                </li>
+                                                <li class="car-card__features-item">
+                                                    <div class="car-card__features-name car-card__features-text">
+                                                        <span>Объем двигателя</span>
+                                                    </div>
+                                                    <div class="car-card__features-value car-card__features-text">
+                                                        <span>2.5</span>
+                                                    </div>
+                                                </li>
+                                                <li class="car-card__features-item">
+                                                    <div class="car-card__features-name car-card__features-text">
+                                                        <span>Мощность</span>
+                                                    </div>
+                                                    <div class="car-card__features-value car-card__features-text">
+                                                        <span>149 л.с.</span>
+                                                    </div>
+                                                </li>
+                                                <li class="car-card__features-item">
+                                                    <div class="car-card__features-name car-card__features-text">
+                                                        <span>Коробка</span>
+                                                    </div>
+                                                    <div class="car-card__features-value car-card__features-text">
+                                                        <span>Автомат</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <ul class="car-card__price">
+                                                <li class="car-card__price-item">
+                                                    <span class="car-card__price-name">Цена на вторичном рынке</span>
+                                                    <span class="car-card__price-num">1 200 000 ₴</span>
+                                                </li>
+                                                <li class="car-card__price-item">
+                                                    <span class="car-card__price-name">Цена автомобиля “под ключ”</span>
+                                                    <span class="car-card__price-num car-card__price-num--color">1 039 999 ₴</span>
+                                                </li>
+                                            </ul>
+                                        </article>
+                                    </div>
+                                    <div class="price-comparison__car-card-wrap">
+                                        <div class="price-comparison__car-card-name">АвтоРИА</div>
+                                        <article class="car-card car-card--price-comparison car-card--border">
+                                            <div class="car-card__img" style="background-image: url(img/car-images/Toyota-RAV4-2022.jpg);"></div>
+                                            <h3 class="car-card__name car-card__name--light">Toyota RAV4 2022</h3>
+                                            <ul class="car-card__features">
+                                                <li class="car-card__features-item">
+                                                    <div class="car-card__features-name car-card__features-text">
+                                                        <span>Мощность</span>
+                                                    </div>
+                                                    <div class="car-card__features-value car-card__features-text">
+                                                        <span>149 л.с.</span>
+                                                    </div>
+                                                </li>
+                                                <li class="car-card__features-item">
+                                                    <div class="car-card__features-name car-card__features-text">
+                                                        <span>Коробка</span>
+                                                    </div>
+                                                    <div class="car-card__features-value car-card__features-text">
+                                                        <span>Автомат</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <ul class="car-card__price">
+                                                <li class="car-card__price-item">
+                                                    <span class="car-card__price-name car-card__price-name--light">Цена автомобиля на АвтоРИА</span>
+                                                    <span class="car-card__price-num">1 100 000 ₴</span>
+                                                </li>
+                                            </ul>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price-comparison__slide swiper-slide">
+                                <div class="price-comparison__slide-inner">
+                                    <div class="price-comparison__car-card-wrap">
+                                        <div class="price-comparison__car-card-name">Наша цена</div>
+                                        <article class="car-card car-card--price-comparison car-card--color-shadow">
+                                            <div class="car-card__img" style="background-image: url(img/car-images/Audi-Q5-2021.jpg);"></div>
+                                            <h3 class="car-card__name">Audi Q5 2021</h3>
+                                            <ul class="car-card__features">
+                                                <li class="car-card__features-item">
+                                                    <div class="car-card__features-name car-card__features-text">
+                                                        <span>Пробег</span>
+                                                    </div>
+                                                    <div class="car-card__features-value car-card__features-text">
+                                                        <span>65 000 км</span>
+                                                    </div>
+                                                </li>
+                                                <li class="car-card__features-item">
+                                                    <div class="car-card__features-name car-card__features-text">
+                                                        <span>Объем двигателя</span>
+                                                    </div>
+                                                    <div class="car-card__features-value car-card__features-text">
+                                                        <span>2</span>
+                                                    </div>
+                                                </li>
+                                                <li class="car-card__features-item">
+                                                    <div class="car-card__features-name car-card__features-text">
+                                                        <span>Мощность</span>
+                                                    </div>
+                                                    <div class="car-card__features-value car-card__features-text">
+                                                        <span>249 л.с.</span>
+                                                    </div>
+                                                </li>
+                                                <li class="car-card__features-item">
+                                                    <div class="car-card__features-name car-card__features-text">
+                                                        <span>Коробка</span>
+                                                    </div>
+                                                    <div class="car-card__features-value car-card__features-text">
+                                                        <span>Автомат</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <ul class="car-card__price">
+                                                <li class="car-card__price-item">
+                                                    <span class="car-card__price-name">Цена на вторичном рынке</span>
+                                                    <span class="car-card__price-num">1 500 000 ₴</span>
+                                                </li>
+                                                <li class="car-card__price-item">
+                                                    <span class="car-card__price-name">Цена автомобиля “под ключ”</span>
+                                                    <span class="car-card__price-num car-card__price-num--color">1 399 999 ₴</span>
+                                                </li>
+                                            </ul>
+                                        </article>
+                                    </div>
+                                    <div class="price-comparison__car-card-wrap">
+                                        <div class="price-comparison__car-card-name">АвтоРИА</div>
+                                        <article class="car-card car-card--price-comparison car-card--border">
+                                            <div class="car-card__img" style="background-image: url(img/car-images/Audi-Q5-2021.jpg);"></div>
+                                            <h3 class="car-card__name car-card__name--light">Audi Q5 2021</h3>
+                                            <ul class="car-card__features">
+                                                <li class="car-card__features-item">
+                                                    <div class="car-card__features-name car-card__features-text">
+                                                        <span>Мощность</span>
+                                                    </div>
+                                                    <div class="car-card__features-value car-card__features-text">
+                                                        <span>249 л.с.</span>
+                                                    </div>
+                                                </li>
+                                                <li class="car-card__features-item">
+                                                    <div class="car-card__features-name car-card__features-text">
+                                                        <span>Коробка</span>
+                                                    </div>
+                                                    <div class="car-card__features-value car-card__features-text">
+                                                        <span>Автомат</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <ul class="car-card__price">
+                                                <li class="car-card__price-item">
+                                                    <span class="car-card__price-name car-card__price-name--light">Цена автомобиля на АвтоРИА</span>
+                                                    <span class="car-card__price-num">1 450 000 ₴</span>
+                                                </li>
+                                            </ul>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-comparison__slider-pagination slider__pagination swiper-pagination"></div>
+                    <button class="slider__btn slider__btn--prev price-comparison__slider-btn price-comparison__slider-btn-prev">
+                        <svg class="slider__btn-icon">
+                            <use href="img/sprite.svg#slider-arrow"></use>
+                        </svg>
+                    </button>
+                    <button class="slider__btn slider__btn--next price-comparison__slider-btn price-comparison__slider-btn-next">
+                        <svg class="slider__btn-icon">
+                            <use href="img/sprite.svg#slider-arrow"></use>
+                        </svg>
+                    </button>
+                    <div class="price-comparison__btn-wrap">
+                        <button class="price-comparison__btn btn-primary">Оставить заявку</button>
+                    </div>
+                </div>
+                <div class="price-comparison__advantages">
+                    <div class="price-comparison__advantages-block">
+                        <div class="price-comparison__advantages-block-inner">
+                            <h3 class="price-comparison__advantages-title content-title">Оснащение автомобиля в США</h3>
+                            <p class="price-comparison__advantages-descr content-descr">Производители обязаны оснащать автомобили базовыми системам безопасности:</p>
+                            <ul class="price-comparison__advantages-list">
+                                <li class="price-comparison__advantages-item">
+                                    <div class="price-comparison__advantages-icon">
+                                        <svg class="price-comparison__advantages-icon-img">
+                                            <use href="img/sprite.svg#airbags-icon"></use>
+                                        </svg>
+                                    </div>
+                                    <span class="price-comparison__advantages-text">12 подушек безопасности</span>
+                                </li>
+                                <li class="price-comparison__advantages-item">
+                                    <div class="price-comparison__advantages-icon">
+                                        <svg class="price-comparison__advantages-icon-img">
+                                            <use href="img/sprite.svg#cruise-control-icon"></use>
+                                        </svg>
+                                    </div>
+                                    <span class="price-comparison__advantages-text">Адаптивный круз-контроль</span>
+                                </li>
+                                <li class="price-comparison__advantages-item">
+                                    <div class="price-comparison__advantages-icon">
+                                        <svg class="price-comparison__advantages-icon-img">
+                                            <use href="img/sprite.svg#way-icon"></use>
+                                        </svg>
+                                    </div>
+                                    <span class="price-comparison__advantages-text">Удержание в полосе</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="price-comparison__advantages-block">
+                        <div class="price-comparison__advantages-block-inner">
+                            <h3 class="price-comparison__advantages-title content-title">Долговечные комплектующие</h3>
+                            <div class="price-comparison__advantages-terms">
+                                <div class="price-comparison__advantages-terms-item">
+                                    <div class="price-comparison__advantages-terms-about">Срок службы авто в США </div>
+                                    <div class="price-comparison__advantages-terms-num price-comparison__advantages-terms-num--lg">480 000 км</div>
+                                </div>
+                                <div class="price-comparison__advantages-terms-item">
+                                    <div class="price-comparison__advantages-terms-about">Срок службы авто</div>
+                                    <div class="price-comparison__advantages-terms-num price-comparison__advantages-terms-num">300 000 км</div>
+                                </div>
+                            </div>
+                            <div class="price-comparison__advantages-btn-wrap">
+                                <button class="price-comparison__advantages-btn btn-primary">Оставить заявку</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="banner-3 section">
+            <div class="container">
+                <div class="banner-3__inner">
+                    <div class="banner-3__main">
+                        <div class="banner-3__text">
+                            <h2 class="banner-3__title content-title">Более 200 автомобилей привезено за 2022</h2>
+                            <p class="banner-3__descr content-descr">Проверяем всю историю обслуживания, владения и ДТП с помощью платных сервисов, созданных для профессиональных продавцов автомобилей.</p>
+                        </div>
+                        <div class="banner-3__tooltip">Мы помогли сэкономить клиентам около <mark class="banner-3__tooltip-num"> 240 000 000 ₴</mark></div>
+                    </div>
+                    <div class="banner-3__btn-wrap">
+                        <button class="banner-3__btn btn-primary">Оставить заявку</button>
+                    </div>
+                    <div class="banner-3__slider-wrap slider slider--banner-3">
+                        <div class="banner-3__slider swiper">
+                            <div class="swiper-wrapper">
+                                <div class="banner-3__slider-item swiper-slide">
+                                    <div class="banner-3__slider-img-wrap">
+                                        <img class="banner-3__slider-img" src="img/banner-3/img-1.jpg" alt="banner img">
+                                    </div>
+                                </div>
+                                <div class="banner-3__slider-item swiper-slide">
+                                    <div class="banner-3__slider-img-wrap">
+                                        <img class="banner-3__slider-img" src="img/banner-3/img-2.jpg" alt="banner img">
+                                    </div>
+                                </div>
+                                <div class="banner-3__slider-item swiper-slide">
+                                    <div class="banner-3__slider-img-wrap">
+                                        <img class="banner-3__slider-img" src="img/banner-3/img-3.jpg" alt="banner img">
+                                    </div>
+                                </div>
+                                <div class="banner-3__slider-item swiper-slide">
+                                    <div class="banner-3__slider-img-wrap">
+                                        <img class="banner-3__slider-img" src="img/banner-3/img-1.jpg" alt="banner img">
+                                    </div>
+                                </div>
+                                <div class="banner-3__slider-item swiper-slide">
+                                    <div class="banner-3__slider-img-wrap">
+                                        <img class="banner-3__slider-img" src="img/banner-3/img-2.jpg" alt="banner img">
+                                    </div>
+                                </div>
+                                <div class="banner-3__slider-item swiper-slide">
+                                    <div class="banner-3__slider-img-wrap">
+                                        <img class="banner-3__slider-img" src="img/banner-3/img-3.jpg" alt="banner img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="banner-3__slider-btn banner-3__slider-btn-prev slider__btn slider__btn--prev">
+                            <svg class="slider__btn-icon">
+                                <use href="img/sprite.svg#slider-arrow"></use>
+                            </svg>
+                        </button>
+                        <button class="banner-3__slider-btn banner-3__slider-btn-next slider__btn slider__btn--next">
+                            <svg class="slider__btn-icon">
+                                <use href="img/sprite.svg#slider-arrow"></use>
+                            </svg>
+                        </button>
+                        <div class="banner-3__slider-pagination slider__pagination swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="calculation section">
+            <div class="container">
+                <div class="calculation__inner">
+                    <div class="calculation__feedback">
+                        <h2 class="calculation__feedback-title">Только телефон, и мы в деле</h2>
+                        <p class="calculation__feedback-descr">Специалист перезвонит Вам в течение 5 минут, в рабочее время для уточнения деталей</p>
+                        <form action="" class="calculation__form">
+                            <input type="text" class="calculation__form-number" placeholder="Введите номер телефона">
+                            <input class="calculation__form-submit btn-primary" type="submit" value="Получить консультацию">
+                            <label class="calculation__form-checkbox checkbox">
+                                <input type="checkbox" class="checkbox__input">
+                                <span class="checkbox__icon">
+                                    <svg class="checkbox__icon-img">
+                                        <use href="img/sprite.svg#checkbox-icon"></use>
+                                    </svg>
+                                </span>
+                                <span class="calculation__form-checkbox-text checkbox__text">Нажимая на кнопку вы соглашаетесь с условиями Политики конфиденциальности</span>
+                            </label>
+                        </form>
+                        <div class="calculation__messengers">
+                            <h3 class="calculation__messengers-title">Связаться с нами через мессенджер</h3>
+                            <div class="calculation__messengers-list">
+                                <a class="calculation__messengers-link">
+                                    <div class="calculation__messengers-icon">
+                                        <svg class="calculation__messengers-icon-img">
+                                            <use href="img/sprite.svg#whatsapp-icon"></use>
+                                        </svg>
+                                    </div>
+                                    <span class="calculation__messengers-name">Whatsapp</span>
+                                </a>
+                                <a class="calculation__messengers-link">
+                                    <div class="calculation__messengers-icon">
+                                        <svg class="calculation__messengers-icon-img">
+                                            <use href="img/sprite.svg#telegram-icon"></use>
+                                        </svg>
+                                    </div>
+                                    <span class="calculation__messengers-name">Whatsapp</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calculation__feedback-advantages">
+                        <h2 class="content-title calculation__feedback-advantages-title">Точный расчет стоимости уже через 1 час</h2>
+                        <ul class="calculation__feedback-advantages-list">
+                            <li class="calculation__feedback-advantages-item">
+                                <div class="calculation__feedback-advantages-icon">
+                                    <svg class="calculation__feedback-advantages-img">
+                                        <use href="img/sprite.svg#advantages-icon"></use>
+                                    </svg>
+                                </div>
+                                <p class="calculation__feedback-advantages-text">Расскажем какие автомобили вы можете купить с наибольшей выгодой.</p>
+                            </li>
+                            <li class="calculation__feedback-advantages-item">
+                                <div class="calculation__feedback-advantages-icon">
+                                    <svg class="calcultel:ation__feedback-advantages-img">
+                                        <use href="img/sprite.svg#advantages-icon"></use>
+                                    </svg>
+                                </div>
+                                <p class="calculation__feedback-advantages-text">Отправим подобранные автомобили на ваш WatsApp или Telegram</p>
+                            </li>
+                            <li class="calculation__feedback-advantages-item">
+                                <div class="calculation__feedback-advantages-icon">
+                                    <svg class="calculation__feedback-advantages-img">
+                                        <use href="img/sprite.svg#advantages-icon"></use>
+                                    </svg>
+                                </div>
+                                <p class="calculation__feedback-advantages-text">Сделаем точный расчет стоимости автомобиля с доставкой в ваш город “под ключ”</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="footer">
+        <div class="container">
+            <h2 class="footer__contact-title content-title">Наши контакты</h2>
+            <div class="footer__contact">
+                <ul class="footer__contact-list">
+                    <li class="footer__contact-item">
+                        <div class="footer__contact-name">Адрес:</div>
+                        <div class="footer__contact-text">
+                            <address>ул. Богдана Хмельницкого 15,<br> Киев, 02000.</address>
+                        </div>
+                    </li>
+                    <li class="footer__contact-item">
+                        <div class="footer__contact-name">Время работы:</div>
+                        <div class="footer__contact-text">Ежедневно 10:00 до 19:00</div>
+                    </li>
+                    <li class="footer__contact-item">
+                        <div class="footer__contact-name">Телефон:</div>
+                        <a class="footer__contact-text footer__contact-text--link" href="tel:380971837474">+38 097 183 7474</a>
+                        <a class="footer__contact-text footer__contact-text--link" href="tel:380982343254">+38 098 234 3254</a>
+                    </li>
+                    <li class="footer__contact-item">
+                        <div class="footer__contact-name">E-mail:</div>
+                        <a class="footer__contact-text footer__contact-text--link" href="mailto:carmarket@gmail.com">carmarket@gmail.com</a>
+                    </li>
+                    <li class="footer__contact-item">
+                        <div class="footer__contact-name">Соц. сети:</div>
+                        <div class="footer__contact-social">
+                            <a href="#" class="footer__contact-social-link">
+                                <svg class="footer__contact-social-icon">
+                                    <use href="img/sprite.svg#telegram-icon"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="footer__contact-social-link">
+                                <svg class="footer__contact-social-icon">
+                                    <use href="img/sprite.svg#whatsapp-icon"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="footer__contact-social-link">
+                                <svg class="footer__contact-social-icon">
+                                    <use href="img/sprite.svg#youtube-icon"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="footer__contact-map-wrap">
+                    <iframe class="footer__contact-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d635.195073874177!2d30.51457441358519!3d50.44519287192348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce57e82b87b3%3A0x55ee660f4a5f0f0c!2z0YPQuy4g0JHQvtCz0LTQsNC90LAg0KXQvNC10LvRjNC90LjRhtC60L7Qs9C-LCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1685739154547!5m2!1sru!2sua" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="footer__bottom-menu">
+                <a href="Реквизиты" class="footer__bottom-menu-link">Реквизиты</a>
+                <a href="Реквизиты" class="footer__bottom-menu-link">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
     <script src="libs/jquery.min.js"></script>
+    <script src="libs/swiper/swiper-bundle.min.js"></script>
+    <script src="libs/jquery.maskedinput.js"></script>
     <script src="js/script.min.js"></script>
 </body>
 </html>
